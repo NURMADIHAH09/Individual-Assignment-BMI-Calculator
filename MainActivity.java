@@ -2,6 +2,8 @@ package com.example.individualassignment2ndattempt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,10 +12,21 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView inst;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        inst=findViewById(R.id.instagram);
+
+        inst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.dietitians.org.my/");
+            }
+        });
 
         EditText w=findViewById(R.id.etWeight);
         EditText h=findViewById(R.id.etHeight);
@@ -35,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri= Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
 
     }
 }
