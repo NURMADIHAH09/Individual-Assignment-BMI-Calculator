@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         EditText h=findViewById(R.id.etHeight);
         Button calc=findViewById(R.id.btCalcl);
         TextView output=findViewById(R.id.tvOutput);
+        TextView z=findViewById(R.id.madihah);
+
 
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,27 @@ public class MainActivity extends AppCompatActivity {
                 double bmi=dW/(dH*dH);
 
                 output.setText(String.valueOf(bmi));
+
+                if(bmi<=18.4){
+                    z.setText("Underweight");
+                }
+                else if (bmi>=18.5 && bmi<=24.9){
+                    z.setText("Normal Weight");
+                }
+                else if (bmi>=25 && bmi<=29.9){
+                    z.setText("Overweight");
+                }
+                else if (bmi>=30 && bmi<=34.9){
+                    z.setText("Moderately Obese");
+                }
+                else if (bmi>=35 && bmi<=39.9){
+                    z.setText("Severely Obese");
+                }
+                else{
+                    z.setText("Very Severely Obese");
+                }
+
+
             }
         });
 
