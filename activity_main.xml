@@ -22,13 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
@@ -112,12 +105,19 @@
             app:backgroundTint="#F44336" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/madihah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lineSpacingExtra="8sp"
-            android:text="Your BMI is"
+            android:text="BMI CATEGORY"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/risk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HEALTH RISK"
             android:textColor="#FFC107"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -126,11 +126,12 @@
             android:id="@+id/tvOutput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lineSpacingExtra="20sp"
+            android:lineSpacingExtra="30sp"
             android:text="0"
             android:textColor="#FFFFFF"
             android:textSize="60sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
